@@ -25,7 +25,7 @@
             "label": "OpenAIChatCompletionClient",
             "config": {
               "model": "gemini-1.5-flash",
-              "api_key": "AIzaSyD4H3Po_8eVJ_P9H3UU_TJBdqRvYTnyONk"
+              "api_key": <api_key>
             }
           },
           "workbench": {
