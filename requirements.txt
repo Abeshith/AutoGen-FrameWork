@@ -1,0 +1,7 @@
+autogen-agentchat
+groq
+autogen_ext[openai,azure,docker]
+autogen-core
+streamlit
+autogenstudio
+pytest

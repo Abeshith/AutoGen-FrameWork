@@ -1,0 +1,93 @@
+{
+  "type": "TeamState",
+  "version": "1.0.0",
+  "agent_states": {
+    "WriterAgent": {
+      "type": "ChatAgentContainerState",
+      "version": "1.0.0",
+      "agent_state": {
+        "type": "AssistantAgentState",
+        "version": "1.0.0",
+        "llm_context": {
+          "messages": [
+            {
+              "content": "Write a crime novel on the topic of 'The Great Heist' and then make a movie script on it.",
+              "source": "user",
+              "type": "UserMessage"
+            },
+            {
+              "content": "**Novel:**\n\nThe vault's empty.  Not a trace.  But whispers trail,  a network of deceit.  Only one could pull it off:  the phantom thief, the Maestro.\n\n**Movie Script:**\n\n**(Opening scene):**  Empty vault.  Security footage flickers.  A single, masked figure vanishes.  **(Voiceover):**  The Great Heist.  Years later, a detective unearths clues.  **(Cut to interrogation):**  Suspect denies all.  **(Cut to flashback):**  Maestro's past, a web of connections.  **(Final scene):**  A face emerges from the shadows.  The Maestro.\n\n\n",
+              "thought": null,
+              "source": "WriterAgent",
+              "type": "AssistantMessage"
+            }
+          ]
+        }
+      },
+      "message_buffer": []
+    },
+    "DirectorAgent": {
+      "type": "ChatAgentContainerState",
+      "version": "1.0.0",
+      "agent_state": {
+        "type": "AssistantAgentState",
+        "version": "1.0.0",
+        "llm_context": {
+          "messages": []
+        }
+      },
+      "message_buffer": [
+        {
+          "id": "e8b27c4a-ad9a-4bc3-bb6a-91c8c46c7569",
+          "source": "user",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2025-07-13T01:02:59.558799+00:00",
+          "content": "Write a crime novel on the topic of 'The Great Heist' and then make a movie script on it.",
+          "type": "TextMessage"
+        },
+        {
+          "id": "a585876d-4e63-4ace-92bc-177b56b8c4cb",
+          "source": "WriterAgent",
+          "models_usage": {
+            "prompt_tokens": 54,
+            "completion_tokens": 143
+          },
+          "metadata": {},
+          "created_at": "2025-07-13T01:03:02.706985+00:00",
+          "content": "**Novel:**\n\nThe vault's empty.  Not a trace.  But whispers trail,  a network of deceit.  Only one could pull it off:  the phantom thief, the Maestro.\n\n**Movie Script:**\n\n**(Opening scene):**  Empty vault.  Security footage flickers.  A single, masked figure vanishes.  **(Voiceover):**  The Great Heist.  Years later, a detective unearths clues.  **(Cut to interrogation):**  Suspect denies all.  **(Cut to flashback):**  Maestro's past, a web of connections.  **(Final scene):**  A face emerges from the shadows.  The Maestro.\n\n\n",
+          "type": "TextMessage"
+        }
+      ]
+    },
+    "RoundRobinGroupChatManager": {
+      "type": "RoundRobinManagerState",
+      "version": "1.0.0",
+      "message_thread": [
+        {
+          "id": "e8b27c4a-ad9a-4bc3-bb6a-91c8c46c7569",
+          "source": "user",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2025-07-13T01:02:59.558799+00:00",
+          "content": "Write a crime novel on the topic of 'The Great Heist' and then make a movie script on it.",
+          "type": "TextMessage"
+        },
+        {
+          "id": "a585876d-4e63-4ace-92bc-177b56b8c4cb",
+          "source": "WriterAgent",
+          "models_usage": {
+            "prompt_tokens": 54,
+            "completion_tokens": 143
+          },
+          "metadata": {},
+          "created_at": "2025-07-13T01:03:02.706985+00:00",
+          "content": "**Novel:**\n\nThe vault's empty.  Not a trace.  But whispers trail,  a network of deceit.  Only one could pull it off:  the phantom thief, the Maestro.\n\n**Movie Script:**\n\n**(Opening scene):**  Empty vault.  Security footage flickers.  A single, masked figure vanishes.  **(Voiceover):**  The Great Heist.  Years later, a detective unearths clues.  **(Cut to interrogation):**  Suspect denies all.  **(Cut to flashback):**  Maestro's past, a web of connections.  **(Final scene):**  A face emerges from the shadows.  The Maestro.\n\n\n",
+          "type": "TextMessage"
+        }
+      ],
+      "current_turn": 0,
+      "next_speaker_index": 1
+    }
+  }
+}
